@@ -1,0 +1,104 @@
+.field {
+  display: grid;
+  gap: 6px;
+  min-width: 0;
+}
+
+.label {
+  font-family: var(--font-ui);
+  font-size: 1rem;
+}
+
+.toolbar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+}
+
+/* Pressed keys read as held down and printed in spot blue */
+.toolbar [aria-pressed="true"] > span {
+  transform: translateY(3px);
+  box-shadow:
+    0 1px 0 0 #8c8576,
+    0 1px 0 2px var(--ink);
+  color: var(--spot-blue);
+}
+
+.box {
+  border: 2px solid var(--ink);
+  border-radius: 2px;
+  background: #f4f0e6;
+}
+
+.box[data-invalid] {
+  border-color: var(--faded-red);
+}
+
+.box:focus-within {
+  outline: var(--focus-ring);
+  outline-offset: 1px;
+}
+
+/* The copy itself is set in the body face so bold and italic look as printed */
+.content {
+  min-height: 9em;
+  padding: 12px;
+  font-family: var(--font-body);
+  font-size: 1.05rem;
+  line-height: var(--body-line-height);
+  outline: none;
+  overflow-wrap: anywhere;
+}
+
+.content[lang="bn"] {
+  line-height: var(--body-line-height-bn);
+}
+
+.content p + p {
+  margin-top: 0.8em;
+}
+
+.content a {
+  color: var(--spot-blue);
+  text-decoration: underline;
+}
+
+.linkForm {
+  display: grid;
+  gap: 6px;
+  padding: var(--space-3);
+  border: 2px dashed var(--ink);
+}
+
+.linkInput {
+  width: 100%;
+  min-height: 48px;
+  padding: 10px 12px;
+  border: 2px solid var(--ink);
+  background: #f4f0e6;
+  font-family: var(--font-ui);
+  font-size: 1rem;
+}
+
+.linkInput:focus-visible {
+  outline: var(--focus-ring);
+  outline-offset: 1px;
+}
+
+.linkActions {
+  display: flex;
+  gap: var(--space-2);
+}
+
+.hint {
+  font-family: var(--font-body);
+  font-style: italic;
+  font-size: 0.95rem;
+  color: #4a463f;
+}
+
+.error {
+  font-family: var(--font-ui);
+  font-size: 0.95rem;
+  color: var(--faded-red);
+}

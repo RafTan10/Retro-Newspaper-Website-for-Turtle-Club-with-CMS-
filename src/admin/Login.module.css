@@ -1,0 +1,23 @@
+.form {
+  display: grid;
+  gap: var(--space-4);
+  max-width: 24rem;
+  margin: var(--space-6) auto 0;
+}
+
+.title {
+  font-family: var(--font-display);
+  font-weight: 400;
+  font-size: 1.8rem;
+  line-height: 1.15;
+}
+
+.intro {
+  font-family: var(--font-body);
+  font-size: 1.05rem;
+}
+
+.error {
+  font-family: var(--font-ui);
+  color: var(--faded-red);
+}

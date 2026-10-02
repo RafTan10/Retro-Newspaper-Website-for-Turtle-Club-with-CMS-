@@ -1,0 +1,110 @@
+.page {
+  min-height: 100dvh;
+  display: grid;
+  place-items: center;
+  padding: var(--space-6) var(--space-4);
+  overflow: hidden;
+}
+
+/* Loading, error and empty states share the stack's footprint */
+.state {
+  display: grid;
+  justify-items: center;
+  gap: var(--space-3);
+  text-align: center;
+}
+
+.pile {
+  position: relative;
+  width: var(--pile-w);
+  aspect-ratio: 6 / 5;
+  margin-bottom: var(--space-4);
+}
+
+/* Error and empty states: a smaller empty spot so the message stays in view */
+.small {
+  width: min(var(--pile-w), 360px);
+}
+
+.sheet {
+  position: absolute;
+  inset: 0;
+  background: var(--newsprint-shade);
+  opacity: 0.06;
+}
+
+.top {
+  opacity: 0.11;
+  animation: breathe 1.6s ease-in-out infinite alternate;
+}
+
+@keyframes breathe {
+  to {
+    opacity: 0.06;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .top {
+    animation: none;
+  }
+}
+
+/* An empty spot on the table where the papers would be */
+.outline {
+  background: transparent;
+  border: 2px dashed rgb(233 228 216 / 0.35);
+  opacity: 1;
+}
+
+.message {
+  font-family: var(--font-display);
+  font-size: clamp(1.4rem, 4vw, 2rem);
+  line-height: 1.2;
+  color: var(--newsprint);
+}
+
+.sub {
+  font-family: var(--font-ui);
+  color: var(--table-text);
+}
+
+.detail {
+  max-width: 40ch;
+  font-family: var(--font-body);
+  font-style: italic;
+  font-size: 0.9rem;
+  color: rgb(233 228 216 / 0.45);
+}
+
+.link {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  font-family: var(--font-ui);
+  color: #9fb8d6;
+}
+
+.retry {
+  min-height: 48px;
+  padding: 0 20px;
+  border: 2px solid var(--ink);
+  border-radius: 9px;
+  background: var(--newsprint);
+  color: var(--ink);
+  font-family: var(--font-ui);
+  font-size: 1rem;
+  box-shadow: 0 4px 0 0 #8c8576;
+  cursor: pointer;
+}
+
+.retry:active {
+  transform: translateY(3px);
+  box-shadow: 0 1px 0 0 #8c8576;
+}
+
+.retry:focus-visible,
+.link:focus-visible {
+  outline: 3px solid #6f93bd;
+  outline-offset: 3px;
+}

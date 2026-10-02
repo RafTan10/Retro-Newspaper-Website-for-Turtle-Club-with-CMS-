@@ -1,0 +1,86 @@
+.wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-6);
+}
+
+.pile {
+  position: relative;
+  /* Landscape, like a folded newspaper lying on a table */
+  width: var(--pile-w);
+  aspect-ratio: 6 / 5;
+}
+
+.paper {
+  position: absolute;
+  inset: 0;
+  border-radius: 1px;
+  will-change: transform;
+  user-select: none;
+}
+
+/* The paper surface. Sizing container for the cover's cqi units, and the
+   perspective for the bend where the paper is held. */
+.sheet {
+  position: absolute;
+  inset: 0;
+  container-type: inline-size;
+}
+
+.flat {
+  position: absolute;
+  inset: 0;
+  background: var(--newsprint);
+}
+
+/* Faint paper grain over the whole sheet */
+.flat::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 3;
+  pointer-events: none;
+  background-image: var(--grain);
+  background-size: 180px 180px;
+  opacity: 0.22;
+  mix-blend-mode: multiply;
+}
+
+/* Papers lower in the pile read as older, shaded newsprint */
+.shade {
+  position: absolute;
+  inset: 0;
+  z-index: 4;
+  pointer-events: none;
+  background: linear-gradient(170deg, var(--newsprint-shade), #b9b1a0);
+  mix-blend-mode: multiply;
+}
+
+/* The whole top paper is the button that opens it */
+.open {
+  position: absolute;
+  inset: 0;
+  z-index: 10;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  cursor: zoom-in;
+}
+
+.open:focus-visible {
+  outline: 3px solid var(--spot-blue);
+  outline-offset: -6px;
+}
+
+.indicator {
+  font-family: var(--font-ui);
+  font-size: 0.95rem;
+  color: var(--table-text);
+}
+
+@media (max-width: 640px) {
+  .wrap {
+    gap: var(--space-5);
+  }
+}

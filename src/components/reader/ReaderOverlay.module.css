@@ -1,0 +1,198 @@
+.overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 100;
+}
+
+.backdrop {
+  position: absolute;
+  inset: 0;
+  background: #000;
+}
+
+.frame {
+  position: absolute;
+  box-shadow:
+    0 24px 48px rgb(0 0 0 / 0.5),
+    0 60px 120px rgb(0 0 0 / 0.6);
+  will-change: transform;
+}
+
+/* The reader page: newsprint with a thin printed border */
+.sheet {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 14px;
+  background: var(--newsprint);
+  color: var(--ink);
+  outline: 1px solid var(--ink);
+  outline-offset: -7px;
+}
+
+.sheet::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background-image: var(--grain);
+  background-size: 180px 180px;
+  opacity: 0.22;
+  mix-blend-mode: multiply;
+}
+
+/* Masthead strip */
+.strip {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: var(--space-4);
+  padding: 2px 6px 8px;
+  border-bottom: 3px double var(--ink);
+}
+
+.masthead {
+  font-family: var(--font-display);
+  font-size: clamp(1.4rem, 2.6vw, 2rem);
+  line-height: 1;
+  text-shadow: -1px 0.5px 0 rgb(46 74 107 / 0.6);
+}
+
+.folio {
+  font-style: italic;
+  font-size: 0.9rem;
+  text-align: right;
+}
+
+.content {
+  position: relative;
+  flex: 1 1 auto;
+  min-height: 0;
+}
+
+.empty {
+  display: grid;
+  place-items: center;
+  height: 100%;
+  font-family: var(--font-ui);
+}
+
+.footer {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: var(--space-4);
+  padding: 6px 6px 0;
+  border-top: 1px solid var(--ink);
+}
+
+.title {
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-family: var(--font-body);
+  font-style: italic;
+  font-weight: 400;
+  font-size: 0.9rem;
+}
+
+.indicator {
+  flex: none;
+  font-family: var(--font-ui);
+  font-size: 0.85rem;
+}
+
+/* The cover the reader grows from, laid over the page while it opens and
+   closes. On a taller reader page the newsprint around it reads as the paper
+   unfolding. */
+.cover {
+  position: absolute;
+  inset: 0;
+  background: var(--newsprint);
+  pointer-events: none;
+}
+
+.coverPaper {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  aspect-ratio: 6 / 5;
+  container-type: inline-size;
+}
+
+.cover::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: var(--grain);
+  background-size: 180px 180px;
+  opacity: 0.22;
+  mix-blend-mode: multiply;
+}
+
+/* Keys sit either side of the page; close in the top right corner */
+.controls {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+
+.controls > * {
+  pointer-events: auto;
+}
+
+.close {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+}
+
+.prev,
+.next {
+  position: absolute;
+  top: calc(var(--reader-cy) - 30px);
+}
+
+.prev {
+  right: calc(50% + var(--reader-w) / 2 + 20px);
+}
+
+.next {
+  left: calc(50% + var(--reader-w) / 2 + 20px);
+}
+
+/* Phones: close above the page, page keys below it */
+.overlay[data-narrow] .close {
+  top: 10px;
+  right: 12px;
+}
+
+.overlay[data-narrow] .prev,
+.overlay[data-narrow] .next {
+  top: calc(var(--reader-cy) + var(--reader-h) / 2 + 16px);
+}
+
+.overlay[data-narrow] .prev {
+  right: calc(50% + 12px);
+}
+
+.overlay[data-narrow] .next {
+  left: calc(50% + 12px);
+}
+
+@media (max-width: 640px) {
+  .strip {
+    padding-bottom: 6px;
+  }
+
+  .folio {
+    font-size: 0.75rem;
+  }
+
+  .title {
+    font-size: 0.8rem;
+  }
+}

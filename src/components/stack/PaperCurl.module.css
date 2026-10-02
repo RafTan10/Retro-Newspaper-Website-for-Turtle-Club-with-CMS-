@@ -1,0 +1,59 @@
+.curl {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  transform-style: preserve-3d;
+}
+
+.strip {
+  position: absolute;
+  top: 0;
+  height: 100%;
+  transform-origin: left center;
+  transform-style: preserve-3d;
+}
+
+.face {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  /* A hair of overlap hides seams between strips */
+  width: calc(100% + 1px);
+  overflow: hidden;
+  background: var(--newsprint);
+}
+
+.slice {
+  position: absolute;
+  top: 0;
+  width: 100cqi;
+  height: 100%;
+}
+
+.face::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 3;
+  background-image: var(--grain);
+  background-size: 180px 180px;
+  opacity: 0.22;
+  mix-blend-mode: multiply;
+}
+
+/* Highlight as the curve turns toward the light; a flat fill per strip so no bands show */
+.light {
+  position: absolute;
+  inset: 0;
+  z-index: 4;
+  background: #fff;
+}
+
+.shade {
+  position: absolute;
+  inset: 0;
+  z-index: 5;
+  background: linear-gradient(170deg, var(--newsprint-shade), #b9b1a0);
+  mix-blend-mode: multiply;
+}

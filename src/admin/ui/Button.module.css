@@ -1,0 +1,95 @@
+/* Text keycap: same construction as KeyButton, sized for labels and 44px+ tap targets */
+
+.key {
+  --travel: 4px;
+  --face: var(--newsprint);
+  --label: var(--ink);
+  --edge: #8c8576;
+  position: relative;
+  display: inline-flex;
+  min-height: calc(44px + var(--travel));
+  padding: 0 0 var(--travel);
+  border: 0;
+  background: transparent;
+  cursor: pointer;
+  touch-action: manipulation;
+  -webkit-tap-highlight-color: transparent;
+  font-family: var(--font-ui);
+}
+
+.cap {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  width: 100%;
+  min-height: 44px;
+  padding: 0 16px;
+  border: 2px solid var(--ink);
+  border-radius: 9px;
+  background:
+    linear-gradient(to bottom, rgb(255 255 255 / 0.3), rgb(255 255 255 / 0) 50%),
+    var(--face);
+  color: var(--label);
+  font-size: 1rem;
+  line-height: 1.1;
+  white-space: nowrap;
+  box-shadow:
+    0 var(--travel) 0 0 var(--edge),
+    0 var(--travel) 0 2px var(--ink);
+  transition:
+    transform 70ms ease-out,
+    box-shadow 70ms ease-out;
+}
+
+.key:active:not(:disabled) .cap {
+  transform: translateY(calc(var(--travel) - 1px));
+  box-shadow:
+    0 1px 0 0 var(--edge),
+    0 1px 0 2px var(--ink);
+}
+
+.key:focus-visible {
+  outline: none;
+}
+
+.key:focus-visible .cap {
+  outline: var(--focus-ring);
+  outline-offset: var(--focus-offset);
+}
+
+.key:disabled {
+  cursor: default;
+}
+
+.key:disabled .cap {
+  --face: #cfc8b8;
+  color: rgb(28 27 25 / 0.5);
+}
+
+.primary {
+  --face: var(--spot-blue);
+  --label: var(--newsprint);
+  --edge: #1a2c41;
+}
+
+.danger {
+  --face: var(--faded-red);
+  --label: var(--newsprint);
+  --edge: #5e2219;
+}
+
+.quiet .cap {
+  background: transparent;
+  box-shadow: none;
+  border-style: dashed;
+}
+
+.quiet:active .cap {
+  transform: none;
+}
+
+.sm .cap {
+  padding: 0 12px;
+  font-size: 0.92rem;
+}

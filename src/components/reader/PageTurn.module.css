@@ -1,0 +1,31 @@
+.stage {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.page {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  transform-origin: left center;
+  background: var(--newsprint);
+  backface-visibility: hidden;
+}
+
+/* A soft shadow that sweeps across the page as it turns */
+.sweep {
+  position: absolute;
+  inset: 0;
+  z-index: 10;
+  pointer-events: none;
+  background-image: linear-gradient(
+    to right,
+    transparent 0%,
+    rgb(28 27 25 / 0.9) 50%,
+    transparent 100%
+  );
+  background-size: 250% 100%;
+  opacity: 0;
+}

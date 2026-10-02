@@ -1,0 +1,48 @@
+:root {
+  /* Color */
+  --ink: #1c1b19;
+  --newsprint: #e9e4d8;
+  --newsprint-shade: #d6cfbf;
+  --table: #000000;
+  --spot-blue: #2e4a6b;
+  --faded-red: #9e3b2e;
+
+  /* Muted newsprint for quiet UI text on the black table */
+  --table-text: rgb(233 228 216 / 0.62);
+
+  /* Type */
+  /* Each Latin face is followed by a Bangla one; Google Fonts serves the Bangla
+     files with a unicode-range, so Latin-only pages never download them */
+  --font-display: "Abril Fatface", "Tiro Bangla", "Bodoni 72", Didot, Georgia, serif;
+  --font-body: "Old Standard TT", "Noto Serif Bengali", "Times New Roman", Georgia, serif;
+  --font-ui: "Special Elite", "Noto Sans Bengali", "Courier New", Courier, monospace;
+  --body-line-height: 1.55;
+  /* Bangla needs more room between lines */
+  --body-line-height-bn: 1.75;
+  --measure: 66ch;
+
+  /* Spacing */
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 24px;
+  --space-6: 32px;
+  --space-7: 48px;
+
+  /* The stack's footprint, shared by the pile and its loading / empty states */
+  --pile-w: min(76vw, 760px, calc((100dvh - 190px) * 1.2));
+
+  /* Focus */
+  --focus-ring: 3px solid var(--spot-blue);
+  --focus-offset: 3px;
+
+  /* Paper grain: inline SVG noise */
+  --grain: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 0.11 0 0 0 0 0.1 0 0 0 0 0.09 0 0 0 1.4 -0.45'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+
+@media (max-width: 640px) {
+  :root {
+    --pile-w: min(calc(100vw - 48px), calc((100dvh - 250px) * 1.2));
+  }
+}

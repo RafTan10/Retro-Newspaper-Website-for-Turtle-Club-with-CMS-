@@ -1,0 +1,356 @@
+[
+  {
+    "id": "iss-014",
+    "slug": "record-nesting-season-on-cove-beach",
+    "masthead": "Turtle Club",
+    "issueNumber": 14,
+    "date": "2026-09-28",
+    "headline": "Volunteers count 212 nests on Cove Beach, the most in a decade",
+    "excerpt": "Night patrols that began in May wrapped up last week with a tally that surprised even the longest-serving members. Loggerhead nests were up by almost a third on last year, and the first hatchlings reached the water on the evening of September 9. Organisers credit the new dune fencing, darker beachfront lighting, and a rota of 140 volunteers who walked the shoreline between midnight and dawn.",
+    "coverImage": "/mock-images/cove-beach-nests.webp",
+    "status": "published",
+    "sortOrder": 1,
+    "publishedAt": "2026-09-28T08:00:00Z",
+    "updatedAt": "2026-09-29T19:12:00Z",
+    "updatedBy": "ines.marlow@turtleclub.example",
+    "pages": [
+      {
+        "id": "p-014-1",
+        "type": "photo",
+        "image": "/mock-images/cove-beach-dawn.webp",
+        "caption": "The last patrol of the season walks the tide line at Cove Beach shortly after 5 a.m. on September 21.",
+        "order": 1
+      },
+      {
+        "id": "p-014-2",
+        "type": "text",
+        "heading": "A season that started slowly",
+        "body": "<p>For the first three weeks of May, patrol logs recorded almost <em>nothing</em>. A cold spring kept the water below the temperature loggerheads prefer, and several regulars wondered aloud whether the season would be a write-off.</p><p>Then, on the night of May 26, two nests appeared within an hour of each other near the north groyne. By the end of June the count stood at 97, already ahead of the whole of last summer.</p>",
+        "order": 2
+      },
+      {
+        "id": "p-014-3",
+        "type": "text",
+        "body": "<p>Patrol coordinator Ines Marlow, who has walked the beach every season since 2011, said the numbers reflect years of slow work rather than one lucky summer.</p><p>\"We moved the fencing back four metres in 2023 and we spent two winters persuading the cafes on the promenade to switch to amber lights,\" she said. \"<strong>None of that shows up overnight.</strong> This is the first year it all came together.\"</p>",
+        "order": 3
+      },
+      {
+        "id": "p-014-4",
+        "type": "photo",
+        "image": "/mock-images/dune-fencing.webp",
+        "caption": "New dune fencing, installed by volunteers over two weekends in March, kept foot traffic away from the upper beach.",
+        "order": 4
+      },
+      {
+        "id": "p-014-5",
+        "type": "text",
+        "heading": "What happens next",
+        "body": "<p>The club will present its full nesting report to the town council on October 14. Members plan to ask for the amber lighting rule to be extended to the south promenade, where only four nests were recorded this year.</p><p>Winter work parties start in November. Anyone who wants to help repair fencing or log beach erosion can sign up at the clubhouse on Saturday mornings or <a href=\"https://example.org/turtle-club/volunteer\">sign up online</a>.</p>",
+        "order": 5
+      }
+    ],
+    "deletedAt": null
+  },
+  {
+    "id": "iss-015",
+    "slug": "hatchlings-return-to-the-river",
+    "masthead": "টার্টল ক্লাব",
+    "issueNumber": 15,
+    "date": "2026-10-01",
+    "headline": "নদীতে ফিরল কচ্ছপের ছানা",
+    "excerpt": "চার মাস ধরে বালুর বাক্সে পাহারা দেওয়ার পর গত বৃহস্পতিবার ভোরে ৪২টি কচ্ছপের ছানাকে নদীতে ছেড়ে দিয়েছেন ক্লাবের স্বেচ্ছাসেবকেরা। ডিম পাড়ার মৌসুমে চরের তিনটি জায়গা থেকে ডিম সংগ্রহ করে ক্লাবঘরের পেছনের হ্যাচারিতে রাখা হয়েছিল। এ বছর ডিম ফোটার হার আগের যেকোনো বছরের চেয়ে বেশি।",
+    "coverImage": "/mock-images/river-hatchlings.webp",
+    "status": "published",
+    "sortOrder": 2,
+    "publishedAt": "2026-10-01T06:30:00Z",
+    "updatedAt": "2026-10-01T21:40:00Z",
+    "updatedBy": "rashida.begum@turtleclub.example",
+    "pages": [
+      {
+        "id": "p-015-1",
+        "type": "photo",
+        "image": "/mock-images/river-dawn-release.webp",
+        "caption": "ভোরের আলো ফোটার আগেই ছানাগুলোকে ঝুড়িতে করে নদীর পাড়ে নিয়ে আসা হয়।",
+        "order": 1
+      },
+      {
+        "id": "p-015-2",
+        "type": "text",
+        "heading": "চার মাসের পাহারা",
+        "body": "<p>মে মাসের শেষ সপ্তাহে চরের বালুতে প্রথম ডিমের খোঁজ পান স্বেচ্ছাসেবকেরা। শিয়াল, কুকুর আর জোয়ারের পানি থেকে বাঁচাতে প্রতিটি ডিম সাবধানে তুলে এনে ক্লাবঘরের হ্যাচারিতে একই গভীরতায় বালুর নিচে রাখা হয়।</p><p>এরপর <strong>১২০ দিন</strong> ধরে পালা করে রাতদিন পাহারা চলেছে। বালুর তাপমাত্রা প্রতিদিন তিনবার মেপে খাতায় লিখে রাখা হয়েছে।</p>",
+        "order": 2
+      },
+      {
+        "id": "p-015-3",
+        "type": "text",
+        "body": "<p>হ্যাচারির দায়িত্বে থাকা রাশিদা বেগম বলেন, “প্রথম ছানাটা যখন বালু ঠেলে মাথা বের করল, আমরা সবাই চুপ করে দাঁড়িয়ে ছিলাম। কেউ একটা কথাও বলেনি।”</p><p>এ বছর সংগ্রহ করা ৫১টি ডিমের মধ্যে ৪২টি থেকে ছানা বেরিয়েছে, যা ক্লাবের হিসাবে <em>এ যাবৎকালের সর্বোচ্চ</em>।</p>",
+        "order": 3
+      },
+      {
+        "id": "p-015-4",
+        "type": "photo",
+        "image": "/mock-images/hatchling-measure.webp",
+        "caption": "ছাড়ার আগে প্রতিটি ছানার ওজন ও খোলসের মাপ নেওয়া হয়।",
+        "order": 4
+      },
+      {
+        "id": "p-015-5",
+        "type": "text",
+        "heading": "সামনে কী",
+        "body": "<p>আগামী মৌসুমে চরের আরও দুটি জায়গায় পাহারা বসানোর পরিকল্পনা করছে ক্লাব। এ জন্য নতুন স্বেচ্ছাসেবক প্রয়োজন।</p><p>আগ্রহীরা প্রতি শনিবার সকালে ক্লাবঘরে আসতে পারেন, অথবা লিখতে পারেন <a href=\"mailto:volunteers@turtleclub.example\">volunteers@turtleclub.example</a> ঠিকানায়।</p>",
+        "order": 5
+      }
+    ],
+    "deletedAt": null
+  },
+  {
+    "id": "iss-012",
+    "slug": "mill-street-night-market",
+    "masthead": "Turtle Club",
+    "issueNumber": 12,
+    "date": "2026-08-31",
+    "headline": "Night market draws its biggest crowd yet to Mill Street",
+    "excerpt": "An estimated 4,000 people filled Mill Street on Friday for the last night market of the summer. Sixty-two stalls, three bands, and a borrowed letterpress printing souvenir posters on the spot kept the street busy until well after the 11 p.m. close. Traders say takings were the best since the market began in 2019.",
+    "coverImage": "/mock-images/night-market.webp",
+    "status": "published",
+    "sortOrder": 3,
+    "publishedAt": "2026-08-31T09:00:00Z",
+    "updatedAt": "2026-09-02T10:05:00Z",
+    "updatedBy": "dale.okafor@turtleclub.example",
+    "pages": [
+      {
+        "id": "p-012-1",
+        "type": "photo",
+        "image": "/mock-images/market-stalls.webp",
+        "caption": "Stalls stretch the full length of Mill Street, closed to traffic from 5 p.m. for the final market of the summer.",
+        "order": 1
+      },
+      {
+        "id": "p-012-2",
+        "type": "text",
+        "heading": "A press on the pavement",
+        "body": "<p>The longest queue of the night was not for food. The print shop on Weir Lane wheeled a 1930s platen press onto the pavement and printed a souvenir poster for anyone who waited, inking each sheet by hand.</p><p>By ten o'clock they had run through 900 sheets of paper and had to send someone back to the shop for more.</p>",
+        "order": 2
+      },
+      {
+        "id": "p-012-3",
+        "type": "photo",
+        "image": "/mock-images/letterpress-poster.webp",
+        "caption": "A printer pulls a souvenir poster from the platen press outside the Weir Lane shop.",
+        "order": 3
+      },
+      {
+        "id": "p-012-4",
+        "type": "text",
+        "body": "<p>Not everyone was pleased. Residents at the river end of the street said music carried well past the close, and two complained to the council about litter the next morning.</p><p>Nasrin Akter, who sold pitha made to her mother’s recipe, summed up the night in Bangla: “এত মানুষ একসাথে আগে কখনো দেখিনি।” (“I have never seen so many people in one place.”)</p><p>Organisers have promised more bins and an earlier finish for amplified music next year. The market returns on the first Friday of June.</p>",
+        "order": 4
+      },
+      {
+        "id": "p-012-5",
+        "type": "text",
+        "heading": "বিক্রেতারা যা বললেন",
+        "body": "<p>পিঠার দোকানি নাসরিন আক্তার বলেন, “রাত দশটার মধ্যেই সব পিঠা শেষ। পরের বার দ্বিগুণ বানিয়ে আনব।”</p><p>চায়ের দোকান চালানো মো. হাবিবুর রহমান জানান, বাজারের দিন তাঁর বিক্রি সাধারণ দিনের প্রায় <strong>তিন গুণ</strong> হয়। তবে তিনিও চান, আগামী বছর রাস্তায় আরও ময়লার ঝুড়ি থাকুক।</p>",
+        "order": 5
+      }
+    ],
+    "deletedAt": null
+  },
+  {
+    "id": "iss-011",
+    "slug": "library-archive-restored",
+    "masthead": "Turtle Club",
+    "issueNumber": 11,
+    "date": "2026-08-17",
+    "headline": "Flood-damaged library archive restored, page by page",
+    "excerpt": "Two years after the spring flood soaked the basement of the town library, the last box of its local history archive is back on the shelves. Volunteers froze, dried, and flattened more than 30,000 documents, from council minutes to a hand-drawn 1890s map of the harbor that most residents had never seen.",
+    "coverImage": "/mock-images/library-archive.webp",
+    "status": "published",
+    "sortOrder": 4,
+    "publishedAt": "2026-08-17T09:00:00Z",
+    "updatedAt": "2026-08-18T16:20:00Z",
+    "updatedBy": "ines.marlow@turtleclub.example",
+    "pages": [
+      {
+        "id": "p-011-1",
+        "type": "photo",
+        "image": "/mock-images/archive-shelves.webp",
+        "caption": "Restored archive boxes return to the library's new second-floor reading room, well above the flood line.",
+        "order": 1
+      },
+      {
+        "id": "p-011-2",
+        "type": "text",
+        "heading": "Frozen to be saved",
+        "body": "<p>Within 48 hours of the flood, archivist Ruth Pellegrini had every wet box loaded into a borrowed fish-processing freezer at the harbor. <em>Freezing stops mould and buys time</em>, she explained, and time was what the volunteers needed.</p><p>Over the following 22 months, small batches were thawed, dried between blotting paper, and pressed flat under boards weighed down with old phone books.</p>",
+        "order": 2
+      },
+      {
+        "id": "p-011-3",
+        "type": "text",
+        "body": "<p>The most surprising find was a hand-drawn map of the harbor from around 1894, folded inside a ledger of mooring fees. It shows a second jetty that no one in town remembers and a building labelled simply \"turtle house\".</p><p>The club has asked the library for a high-resolution scan, and members are already arguing about what the turtle house was for.</p>",
+        "order": 3
+      },
+      {
+        "id": "p-011-4",
+        "type": "photo",
+        "image": "/mock-images/harbor-map-1894.webp",
+        "caption": "The 1894 harbor map, found folded inside a ledger of mooring fees, will go on display in the reading room in September.",
+        "order": 4
+      },
+      {
+        "id": "p-011-5",
+        "type": "text",
+        "heading": "Open to the public",
+        "body": "<p>The reading room opens on weekday afternoons from 1 p.m. to 5 p.m. Visitors can request any item from the archive, though the most fragile pieces can only be viewed as copies.</p><p>The library is <strong>still looking</strong> for anyone with photographs of the harbor taken before 1950, to scan and add to the collection.</p>",
+        "order": 5
+      },
+      {
+        "id": "p-011-6",
+        "type": "text",
+        "body": "<p>Pellegrini said the restoration would not have been possible without the 85 volunteers who gave up evenings and weekends to sit at drying tables.</p><p>\"Most of them had never handled an archive in their lives,\" she said. \"By the end, they could tell you which decade a sheet of paper came from by the feel of it.\"</p>",
+        "order": 6
+      }
+    ],
+    "deletedAt": null
+  },
+  {
+    "id": "iss-013",
+    "slug": "harbor-ferry-returns",
+    "masthead": "Turtle Club",
+    "issueNumber": 13,
+    "date": "2026-09-14",
+    "headline": "Harbor ferry returns after a forty-year absence",
+    "excerpt": "The little blue ferry that once carried mill workers across the inlet made its first passenger crossing since 1986 on Saturday morning. A restored 1952 hull, a new electric motor, and a timetable of eight sailings a day will connect the old quay to the marsh boardwalk until the end of October.",
+    "coverImage": "/mock-images/harbor-ferry.webp",
+    "status": "hidden",
+    "sortOrder": 5,
+    "publishedAt": "2026-09-14T08:00:00Z",
+    "updatedAt": "2026-09-20T12:00:00Z",
+    "updatedBy": "dale.okafor@turtleclub.example",
+    "pages": [
+      {
+        "id": "p-013-1",
+        "type": "photo",
+        "image": "/mock-images/old-quay.webp",
+        "caption": "Passengers queue at the old quay for the 9 a.m. crossing, the first scheduled sailing in four decades.",
+        "order": 1
+      },
+      {
+        "id": "p-013-2",
+        "type": "text",
+        "heading": "Eight minutes across the inlet",
+        "body": "<p>The crossing takes eight minutes and costs two dollars, the same fare the old service charged in its final year once adjusted for inflation. <strong>Children under twelve and club members ride free.</strong></p><p>On the first morning, every sailing until noon left the quay full. Skipper Dale Okafor said he lost count of the number of passengers who told him their grandparents had worked the mills across the water.</p>",
+        "order": 2
+      },
+      {
+        "id": "p-013-3",
+        "type": "text",
+        "body": "<p>The restoration took three years and was paid for by a mix of a state heritage grant, a harbor levy, and more than 600 small donations collected in jars along Front Street.</p><p>The hull was found in 2022 in a boatyard two towns over, where it had been used as a storage shed. Volunteers stripped eleven layers of paint before reaching the original blue.</p>",
+        "order": 3
+      }
+    ],
+    "deletedAt": null
+  },
+  {
+    "id": "iss-016",
+    "slug": "pier-repairs-to-begin-in-november",
+    "masthead": "Turtle Club",
+    "issueNumber": 16,
+    "date": "2026-10-12",
+    "headline": "Pier repairs to begin in November",
+    "excerpt": "The north end of the fishing pier will close for six weeks from November 3 while rotten deck boards and two support piles are replaced. Anglers can use the south steps in the meantime.",
+    "coverImage": "/mock-images/fishing-pier.webp",
+    "status": "draft",
+    "sortOrder": 6,
+    "publishedAt": null,
+    "updatedAt": "2026-10-02T09:15:00Z",
+    "updatedBy": "ines.marlow@turtleclub.example",
+    "pages": [
+      {
+        "id": "p-016-1",
+        "type": "photo",
+        "image": "/mock-images/pier-boards.webp",
+        "caption": "Deck boards marked for replacement on the north end of the pier.",
+        "order": 1
+      },
+      {
+        "id": "p-016-2",
+        "type": "text",
+        "heading": "Six weeks, two piles",
+        "body": "<p>Engineers found soft timber in two of the original 1960s piles during a routine inspection in August. The council has approved the repair and the contractor starts on <strong>November 3</strong>.</p>",
+        "order": 2
+      }
+    ],
+    "deletedAt": null
+  },
+  {
+    "id": "iss-010",
+    "slug": "spring-beach-clean-fills-forty-bags",
+    "masthead": "Turtle Club",
+    "issueNumber": 10,
+    "date": "2026-04-12",
+    "headline": "Spring beach clean fills forty bags",
+    "excerpt": "Ninety volunteers cleared Cove Beach of forty bags of rubbish on Sunday morning, most of it plastic washed up by the March storms.",
+    "coverImage": "/mock-images/beach-clean.webp",
+    "status": "archived",
+    "sortOrder": 7,
+    "publishedAt": "2026-04-12T08:00:00Z",
+    "updatedAt": "2026-06-01T11:00:00Z",
+    "updatedBy": "rashida.begum@turtleclub.example",
+    "pages": [
+      {
+        "id": "p-010-1",
+        "type": "photo",
+        "image": "/mock-images/beach-clean-bags.webp",
+        "caption": "Full bags lined up by the lifeguard hut at the end of the morning.",
+        "order": 1
+      },
+      {
+        "id": "p-010-2",
+        "type": "text",
+        "body": "<p>The most common find was bottle caps, followed by fishing line and the plastic rings from drink packs. Volunteers logged every item so the numbers can go to the national beach survey.</p>",
+        "order": 2
+      },
+      {
+        "id": "p-010-3",
+        "type": "text",
+        "heading": "Next clean",
+        "body": "<p>The autumn clean is planned for the first Sunday after the nesting season ends.</p>",
+        "order": 3
+      }
+    ],
+    "deletedAt": null
+  },
+  {
+    "id": "iss-009",
+    "slug": "bake-sale-raises-1240-for-the-hatchery",
+    "masthead": "Turtle Club",
+    "issueNumber": 9,
+    "date": "2026-07-20",
+    "headline": "Bake sale raises $1,240 for the hatchery",
+    "excerpt": "Forty-one cakes, three hundred cookies and a very popular lemon tart sold out by noon on Saturday, raising enough to replace the hatchery's sand boxes before the nesting season.",
+    "coverImage": "/mock-images/market-stalls.webp",
+    "status": "published",
+    "sortOrder": 8,
+    "publishedAt": "2026-07-20T08:00:00Z",
+    "updatedAt": "2026-09-25T10:00:00Z",
+    "updatedBy": "dale.okafor@turtleclub.example",
+    "deletedAt": "2026-09-25T10:00:00Z",
+    "pages": [
+      {
+        "id": "p-009-1",
+        "type": "photo",
+        "image": "/mock-images/letterpress-poster.webp",
+        "caption": "The cake table at 9 a.m., an hour before the first sell-out.",
+        "order": 1
+      },
+      {
+        "id": "p-009-2",
+        "type": "text",
+        "heading": "Sold out by noon",
+        "body": "<p>Volunteers baked through Friday night. The lemon tart went first, followed by the <em>turtle-shaped</em> shortbread.</p>",
+        "order": 2
+      }
+    ]
+  }
+]

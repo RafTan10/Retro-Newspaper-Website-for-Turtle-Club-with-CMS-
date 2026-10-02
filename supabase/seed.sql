@@ -1,0 +1,90 @@
+-- Sample issues for local development, generated from src/data/mock-issues.json.
+-- Includes a fully Bangla issue, a mixed one, draft / hidden / archived examples, and one in Recently deleted.
+-- Loaded by `supabase db reset`; safe to run again (it skips rows that exist).
+
+insert into public.issues (id, slug, masthead, issue_number, date, headline, excerpt, cover_image, status, sort_order, published_at, deleted_at) values
+  ('e6ddf83a-417f-5c55-a7dd-2e031c068c53', 'record-nesting-season-on-cove-beach', 'Turtle Club', 14, '2026-09-28', 'Volunteers count 212 nests on Cove Beach, the most in a decade', 'Night patrols that began in May wrapped up last week with a tally that surprised even the longest-serving members. Loggerhead nests were up by almost a third on last year, and the first hatchlings reached the water on the evening of September 9. Organisers credit the new dune fencing, darker beachfront lighting, and a rota of 140 volunteers who walked the shoreline between midnight and dawn.', '/mock-images/cove-beach-nests.webp', 'published', 1, '2026-09-28T08:00:00Z', null)
+on conflict (id) do nothing;
+
+insert into public.pages (id, issue_id, type, image, caption, heading, body, "order") values
+  ('98020afc-834a-5730-bd89-52c659da271e', 'e6ddf83a-417f-5c55-a7dd-2e031c068c53', 'photo', '/mock-images/cove-beach-dawn.webp', 'The last patrol of the season walks the tide line at Cove Beach shortly after 5 a.m. on September 21.', null, null, 1),
+  ('93420f16-e7c5-5eeb-8729-4d3d6e46dba0', 'e6ddf83a-417f-5c55-a7dd-2e031c068c53', 'text', null, null, 'A season that started slowly', '<p>For the first three weeks of May, patrol logs recorded almost <em>nothing</em>. A cold spring kept the water below the temperature loggerheads prefer, and several regulars wondered aloud whether the season would be a write-off.</p><p>Then, on the night of May 26, two nests appeared within an hour of each other near the north groyne. By the end of June the count stood at 97, already ahead of the whole of last summer.</p>', 2),
+  ('4e6d5307-7add-576a-8c26-541d94423e97', 'e6ddf83a-417f-5c55-a7dd-2e031c068c53', 'text', null, null, null, '<p>Patrol coordinator Ines Marlow, who has walked the beach every season since 2011, said the numbers reflect years of slow work rather than one lucky summer.</p><p>"We moved the fencing back four metres in 2023 and we spent two winters persuading the cafes on the promenade to switch to amber lights," she said. "<strong>None of that shows up overnight.</strong> This is the first year it all came together."</p>', 3),
+  ('a251c374-0895-5132-9fe4-54577aa2c12a', 'e6ddf83a-417f-5c55-a7dd-2e031c068c53', 'photo', '/mock-images/dune-fencing.webp', 'New dune fencing, installed by volunteers over two weekends in March, kept foot traffic away from the upper beach.', null, null, 4),
+  ('989dd680-d08c-5c93-b493-2867bfd7af4c', 'e6ddf83a-417f-5c55-a7dd-2e031c068c53', 'text', null, null, 'What happens next', '<p>The club will present its full nesting report to the town council on October 14. Members plan to ask for the amber lighting rule to be extended to the south promenade, where only four nests were recorded this year.</p><p>Winter work parties start in November. Anyone who wants to help repair fencing or log beach erosion can sign up at the clubhouse on Saturday mornings or <a href="https://example.org/turtle-club/volunteer">sign up online</a>.</p>', 5)
+on conflict (id) do nothing;
+
+insert into public.issues (id, slug, masthead, issue_number, date, headline, excerpt, cover_image, status, sort_order, published_at, deleted_at) values
+  ('3730391e-4626-5f9e-b333-aef91af20311', 'hatchlings-return-to-the-river', 'টার্টল ক্লাব', 15, '2026-10-01', 'নদীতে ফিরল কচ্ছপের ছানা', 'চার মাস ধরে বালুর বাক্সে পাহারা দেওয়ার পর গত বৃহস্পতিবার ভোরে ৪২টি কচ্ছপের ছানাকে নদীতে ছেড়ে দিয়েছেন ক্লাবের স্বেচ্ছাসেবকেরা। ডিম পাড়ার মৌসুমে চরের তিনটি জায়গা থেকে ডিম সংগ্রহ করে ক্লাবঘরের পেছনের হ্যাচারিতে রাখা হয়েছিল। এ বছর ডিম ফোটার হার আগের যেকোনো বছরের চেয়ে বেশি।', '/mock-images/river-hatchlings.webp', 'published', 2, '2026-10-01T06:30:00Z', null)
+on conflict (id) do nothing;
+
+insert into public.pages (id, issue_id, type, image, caption, heading, body, "order") values
+  ('d19bace0-5492-5243-981a-1977f8038664', '3730391e-4626-5f9e-b333-aef91af20311', 'photo', '/mock-images/river-dawn-release.webp', 'ভোরের আলো ফোটার আগেই ছানাগুলোকে ঝুড়িতে করে নদীর পাড়ে নিয়ে আসা হয়।', null, null, 1),
+  ('da61da88-4ebb-56da-973a-2671180cc2ef', '3730391e-4626-5f9e-b333-aef91af20311', 'text', null, null, 'চার মাসের পাহারা', '<p>মে মাসের শেষ সপ্তাহে চরের বালুতে প্রথম ডিমের খোঁজ পান স্বেচ্ছাসেবকেরা। শিয়াল, কুকুর আর জোয়ারের পানি থেকে বাঁচাতে প্রতিটি ডিম সাবধানে তুলে এনে ক্লাবঘরের হ্যাচারিতে একই গভীরতায় বালুর নিচে রাখা হয়।</p><p>এরপর <strong>১২০ দিন</strong> ধরে পালা করে রাতদিন পাহারা চলেছে। বালুর তাপমাত্রা প্রতিদিন তিনবার মেপে খাতায় লিখে রাখা হয়েছে।</p>', 2),
+  ('4a4c8dde-1cd1-5a11-a0fd-1745bfcfab3b', '3730391e-4626-5f9e-b333-aef91af20311', 'text', null, null, null, '<p>হ্যাচারির দায়িত্বে থাকা রাশিদা বেগম বলেন, “প্রথম ছানাটা যখন বালু ঠেলে মাথা বের করল, আমরা সবাই চুপ করে দাঁড়িয়ে ছিলাম। কেউ একটা কথাও বলেনি।”</p><p>এ বছর সংগ্রহ করা ৫১টি ডিমের মধ্যে ৪২টি থেকে ছানা বেরিয়েছে, যা ক্লাবের হিসাবে <em>এ যাবৎকালের সর্বোচ্চ</em>।</p>', 3),
+  ('eab54c4c-5292-551d-93a2-128ecc335896', '3730391e-4626-5f9e-b333-aef91af20311', 'photo', '/mock-images/hatchling-measure.webp', 'ছাড়ার আগে প্রতিটি ছানার ওজন ও খোলসের মাপ নেওয়া হয়।', null, null, 4),
+  ('f79795a0-03de-5285-8ef2-ba9a661af7af', '3730391e-4626-5f9e-b333-aef91af20311', 'text', null, null, 'সামনে কী', '<p>আগামী মৌসুমে চরের আরও দুটি জায়গায় পাহারা বসানোর পরিকল্পনা করছে ক্লাব। এ জন্য নতুন স্বেচ্ছাসেবক প্রয়োজন।</p><p>আগ্রহীরা প্রতি শনিবার সকালে ক্লাবঘরে আসতে পারেন, অথবা লিখতে পারেন <a href="mailto:volunteers@turtleclub.example">volunteers@turtleclub.example</a> ঠিকানায়।</p>', 5)
+on conflict (id) do nothing;
+
+insert into public.issues (id, slug, masthead, issue_number, date, headline, excerpt, cover_image, status, sort_order, published_at, deleted_at) values
+  ('2aa6faa5-53b6-550c-b77c-bd022bbcb8fe', 'mill-street-night-market', 'Turtle Club', 12, '2026-08-31', 'Night market draws its biggest crowd yet to Mill Street', 'An estimated 4,000 people filled Mill Street on Friday for the last night market of the summer. Sixty-two stalls, three bands, and a borrowed letterpress printing souvenir posters on the spot kept the street busy until well after the 11 p.m. close. Traders say takings were the best since the market began in 2019.', '/mock-images/night-market.webp', 'published', 3, '2026-08-31T09:00:00Z', null)
+on conflict (id) do nothing;
+
+insert into public.pages (id, issue_id, type, image, caption, heading, body, "order") values
+  ('75cf966a-c941-5ef9-834e-800e0c24283c', '2aa6faa5-53b6-550c-b77c-bd022bbcb8fe', 'photo', '/mock-images/market-stalls.webp', 'Stalls stretch the full length of Mill Street, closed to traffic from 5 p.m. for the final market of the summer.', null, null, 1),
+  ('5c1eb4c7-45a7-59bb-be93-d9aab2c14816', '2aa6faa5-53b6-550c-b77c-bd022bbcb8fe', 'text', null, null, 'A press on the pavement', '<p>The longest queue of the night was not for food. The print shop on Weir Lane wheeled a 1930s platen press onto the pavement and printed a souvenir poster for anyone who waited, inking each sheet by hand.</p><p>By ten o''clock they had run through 900 sheets of paper and had to send someone back to the shop for more.</p>', 2),
+  ('a2422212-1caa-5873-ac13-8547688fa769', '2aa6faa5-53b6-550c-b77c-bd022bbcb8fe', 'photo', '/mock-images/letterpress-poster.webp', 'A printer pulls a souvenir poster from the platen press outside the Weir Lane shop.', null, null, 3),
+  ('8ee134cd-8350-5de7-ac85-726664b4547c', '2aa6faa5-53b6-550c-b77c-bd022bbcb8fe', 'text', null, null, null, '<p>Not everyone was pleased. Residents at the river end of the street said music carried well past the close, and two complained to the council about litter the next morning.</p><p>Nasrin Akter, who sold pitha made to her mother’s recipe, summed up the night in Bangla: “এত মানুষ একসাথে আগে কখনো দেখিনি।” (“I have never seen so many people in one place.”)</p><p>Organisers have promised more bins and an earlier finish for amplified music next year. The market returns on the first Friday of June.</p>', 4),
+  ('8cb49776-3494-5bcd-bb23-43278aa7ad60', '2aa6faa5-53b6-550c-b77c-bd022bbcb8fe', 'text', null, null, 'বিক্রেতারা যা বললেন', '<p>পিঠার দোকানি নাসরিন আক্তার বলেন, “রাত দশটার মধ্যেই সব পিঠা শেষ। পরের বার দ্বিগুণ বানিয়ে আনব।”</p><p>চায়ের দোকান চালানো মো. হাবিবুর রহমান জানান, বাজারের দিন তাঁর বিক্রি সাধারণ দিনের প্রায় <strong>তিন গুণ</strong> হয়। তবে তিনিও চান, আগামী বছর রাস্তায় আরও ময়লার ঝুড়ি থাকুক।</p>', 5)
+on conflict (id) do nothing;
+
+insert into public.issues (id, slug, masthead, issue_number, date, headline, excerpt, cover_image, status, sort_order, published_at, deleted_at) values
+  ('0403b197-4d7b-5776-8d6f-90d0431b6ec9', 'library-archive-restored', 'Turtle Club', 11, '2026-08-17', 'Flood-damaged library archive restored, page by page', 'Two years after the spring flood soaked the basement of the town library, the last box of its local history archive is back on the shelves. Volunteers froze, dried, and flattened more than 30,000 documents, from council minutes to a hand-drawn 1890s map of the harbor that most residents had never seen.', '/mock-images/library-archive.webp', 'published', 4, '2026-08-17T09:00:00Z', null)
+on conflict (id) do nothing;
+
+insert into public.pages (id, issue_id, type, image, caption, heading, body, "order") values
+  ('7c2de845-7365-5241-a0ca-85b1e4e97fd1', '0403b197-4d7b-5776-8d6f-90d0431b6ec9', 'photo', '/mock-images/archive-shelves.webp', 'Restored archive boxes return to the library''s new second-floor reading room, well above the flood line.', null, null, 1),
+  ('9b50d4b8-e2a8-57fb-a03b-66e545049995', '0403b197-4d7b-5776-8d6f-90d0431b6ec9', 'text', null, null, 'Frozen to be saved', '<p>Within 48 hours of the flood, archivist Ruth Pellegrini had every wet box loaded into a borrowed fish-processing freezer at the harbor. <em>Freezing stops mould and buys time</em>, she explained, and time was what the volunteers needed.</p><p>Over the following 22 months, small batches were thawed, dried between blotting paper, and pressed flat under boards weighed down with old phone books.</p>', 2),
+  ('713d2279-abfe-53d1-a57b-09ab1a55b9a2', '0403b197-4d7b-5776-8d6f-90d0431b6ec9', 'text', null, null, null, '<p>The most surprising find was a hand-drawn map of the harbor from around 1894, folded inside a ledger of mooring fees. It shows a second jetty that no one in town remembers and a building labelled simply "turtle house".</p><p>The club has asked the library for a high-resolution scan, and members are already arguing about what the turtle house was for.</p>', 3),
+  ('9f512671-8e08-5312-8caa-5a35a2596126', '0403b197-4d7b-5776-8d6f-90d0431b6ec9', 'photo', '/mock-images/harbor-map-1894.webp', 'The 1894 harbor map, found folded inside a ledger of mooring fees, will go on display in the reading room in September.', null, null, 4),
+  ('2e689b9e-6d75-566c-9f3a-30d24b37fa1a', '0403b197-4d7b-5776-8d6f-90d0431b6ec9', 'text', null, null, 'Open to the public', '<p>The reading room opens on weekday afternoons from 1 p.m. to 5 p.m. Visitors can request any item from the archive, though the most fragile pieces can only be viewed as copies.</p><p>The library is <strong>still looking</strong> for anyone with photographs of the harbor taken before 1950, to scan and add to the collection.</p>', 5),
+  ('55af5cfd-bd07-50fe-891d-48b8d5fdd01c', '0403b197-4d7b-5776-8d6f-90d0431b6ec9', 'text', null, null, null, '<p>Pellegrini said the restoration would not have been possible without the 85 volunteers who gave up evenings and weekends to sit at drying tables.</p><p>"Most of them had never handled an archive in their lives," she said. "By the end, they could tell you which decade a sheet of paper came from by the feel of it."</p>', 6)
+on conflict (id) do nothing;
+
+insert into public.issues (id, slug, masthead, issue_number, date, headline, excerpt, cover_image, status, sort_order, published_at, deleted_at) values
+  ('b7d0dfaa-7dfa-57a6-b539-54f9ea2b2cc9', 'harbor-ferry-returns', 'Turtle Club', 13, '2026-09-14', 'Harbor ferry returns after a forty-year absence', 'The little blue ferry that once carried mill workers across the inlet made its first passenger crossing since 1986 on Saturday morning. A restored 1952 hull, a new electric motor, and a timetable of eight sailings a day will connect the old quay to the marsh boardwalk until the end of October.', '/mock-images/harbor-ferry.webp', 'hidden', 5, '2026-09-14T08:00:00Z', null)
+on conflict (id) do nothing;
+
+insert into public.pages (id, issue_id, type, image, caption, heading, body, "order") values
+  ('ec76b57c-4cd8-5de4-8687-bffc75e8d6cf', 'b7d0dfaa-7dfa-57a6-b539-54f9ea2b2cc9', 'photo', '/mock-images/old-quay.webp', 'Passengers queue at the old quay for the 9 a.m. crossing, the first scheduled sailing in four decades.', null, null, 1),
+  ('98b86a49-e290-5326-9ddf-28b0ab52ade1', 'b7d0dfaa-7dfa-57a6-b539-54f9ea2b2cc9', 'text', null, null, 'Eight minutes across the inlet', '<p>The crossing takes eight minutes and costs two dollars, the same fare the old service charged in its final year once adjusted for inflation. <strong>Children under twelve and club members ride free.</strong></p><p>On the first morning, every sailing until noon left the quay full. Skipper Dale Okafor said he lost count of the number of passengers who told him their grandparents had worked the mills across the water.</p>', 2),
+  ('70ca553f-f4f2-5e68-9669-aa9fe35c6f04', 'b7d0dfaa-7dfa-57a6-b539-54f9ea2b2cc9', 'text', null, null, null, '<p>The restoration took three years and was paid for by a mix of a state heritage grant, a harbor levy, and more than 600 small donations collected in jars along Front Street.</p><p>The hull was found in 2022 in a boatyard two towns over, where it had been used as a storage shed. Volunteers stripped eleven layers of paint before reaching the original blue.</p>', 3)
+on conflict (id) do nothing;
+
+insert into public.issues (id, slug, masthead, issue_number, date, headline, excerpt, cover_image, status, sort_order, published_at, deleted_at) values
+  ('2e458ac4-38c6-5bee-a39f-7b55d1b9dea0', 'pier-repairs-to-begin-in-november', 'Turtle Club', 16, '2026-10-12', 'Pier repairs to begin in November', 'The north end of the fishing pier will close for six weeks from November 3 while rotten deck boards and two support piles are replaced. Anglers can use the south steps in the meantime.', '/mock-images/fishing-pier.webp', 'draft', 6, null, null)
+on conflict (id) do nothing;
+
+insert into public.pages (id, issue_id, type, image, caption, heading, body, "order") values
+  ('213d1ea2-c045-52df-9aa3-f12bccf33952', '2e458ac4-38c6-5bee-a39f-7b55d1b9dea0', 'photo', '/mock-images/pier-boards.webp', 'Deck boards marked for replacement on the north end of the pier.', null, null, 1),
+  ('0386b33b-08c7-51ac-a181-ad18faa7f1f5', '2e458ac4-38c6-5bee-a39f-7b55d1b9dea0', 'text', null, null, 'Six weeks, two piles', '<p>Engineers found soft timber in two of the original 1960s piles during a routine inspection in August. The council has approved the repair and the contractor starts on <strong>November 3</strong>.</p>', 2)
+on conflict (id) do nothing;
+
+insert into public.issues (id, slug, masthead, issue_number, date, headline, excerpt, cover_image, status, sort_order, published_at, deleted_at) values
+  ('0efaaa13-4a51-559f-9dcc-dd865e864a4f', 'spring-beach-clean-fills-forty-bags', 'Turtle Club', 10, '2026-04-12', 'Spring beach clean fills forty bags', 'Ninety volunteers cleared Cove Beach of forty bags of rubbish on Sunday morning, most of it plastic washed up by the March storms.', '/mock-images/beach-clean.webp', 'archived', 7, '2026-04-12T08:00:00Z', null)
+on conflict (id) do nothing;
+
+insert into public.pages (id, issue_id, type, image, caption, heading, body, "order") values
+  ('26f2a182-468b-5cc6-a4c9-7d7ed1bda295', '0efaaa13-4a51-559f-9dcc-dd865e864a4f', 'photo', '/mock-images/beach-clean-bags.webp', 'Full bags lined up by the lifeguard hut at the end of the morning.', null, null, 1),
+  ('1e98911d-8648-5dba-a817-451b1c23d813', '0efaaa13-4a51-559f-9dcc-dd865e864a4f', 'text', null, null, null, '<p>The most common find was bottle caps, followed by fishing line and the plastic rings from drink packs. Volunteers logged every item so the numbers can go to the national beach survey.</p>', 2),
+  ('3f3da735-dcf2-577f-bf15-fe5e027f8b82', '0efaaa13-4a51-559f-9dcc-dd865e864a4f', 'text', null, null, 'Next clean', '<p>The autumn clean is planned for the first Sunday after the nesting season ends.</p>', 3)
+on conflict (id) do nothing;
+
+insert into public.issues (id, slug, masthead, issue_number, date, headline, excerpt, cover_image, status, sort_order, published_at, deleted_at) values
+  ('9589ea87-dffc-58c3-b249-0d3c492b9c10', 'bake-sale-raises-1240-for-the-hatchery', 'Turtle Club', 9, '2026-07-20', 'Bake sale raises $1,240 for the hatchery', 'Forty-one cakes, three hundred cookies and a very popular lemon tart sold out by noon on Saturday, raising enough to replace the hatchery''s sand boxes before the nesting season.', '/mock-images/market-stalls.webp', 'published', 8, '2026-07-20T08:00:00Z', '2026-09-25T10:00:00Z')
+on conflict (id) do nothing;
+
+insert into public.pages (id, issue_id, type, image, caption, heading, body, "order") values
+  ('e9878fd2-0c29-524d-819e-be8a23bee7d4', '9589ea87-dffc-58c3-b249-0d3c492b9c10', 'photo', '/mock-images/letterpress-poster.webp', 'The cake table at 9 a.m., an hour before the first sell-out.', null, null, 1),
+  ('95a65d6e-14a6-5a9c-8a64-7445c9d5603e', '9589ea87-dffc-58c3-b249-0d3c492b9c10', 'text', null, null, 'Sold out by noon', '<p>Volunteers baked through Friday night. The lemon tart went first, followed by the <em>turtle-shaped</em> shortbread.</p>', 2)
+on conflict (id) do nothing;

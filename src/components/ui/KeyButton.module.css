@@ -1,0 +1,90 @@
+/* A typewriter keycap: rounded square with an inset bottom edge that depresses on click. */
+
+.key {
+  --travel: 5px;
+  position: relative;
+  display: inline-grid;
+  place-items: center;
+  padding: 0;
+  border: 0;
+  border-radius: 12px;
+  background: #0e0d0c;
+  cursor: pointer;
+  touch-action: manipulation;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.md {
+  width: 56px;
+  height: calc(56px + var(--travel));
+}
+
+.lg {
+  width: 64px;
+  height: calc(64px + var(--travel));
+}
+
+.cap {
+  position: absolute;
+  inset: 0 0 var(--travel) 0;
+  display: grid;
+  place-items: center;
+  border: 2px solid var(--ink);
+  border-radius: 12px;
+  background:
+    linear-gradient(to bottom, rgb(255 255 255 / 0.35), rgb(255 255 255 / 0) 45%),
+    var(--newsprint);
+  color: var(--ink);
+  box-shadow:
+    0 var(--travel) 0 0 #8c8576,
+    0 var(--travel) 0 2px var(--ink),
+    inset 0 -3px 0 rgb(28 27 25 / 0.12);
+  transition:
+    transform 70ms ease-out,
+    box-shadow 70ms ease-out;
+}
+
+.key:hover .cap {
+  background:
+    linear-gradient(to bottom, rgb(255 255 255 / 0.5), rgb(255 255 255 / 0) 45%),
+    var(--newsprint);
+}
+
+.key:active .cap {
+  transform: translateY(calc(var(--travel) - 1px));
+  box-shadow:
+    0 1px 0 0 #8c8576,
+    0 1px 0 2px var(--ink),
+    inset 0 -1px 0 rgb(28 27 25 / 0.12);
+}
+
+.key:focus-visible {
+  outline: none;
+}
+
+.key:focus-visible .cap {
+  outline: var(--focus-ring);
+  outline-color: #6f93bd;
+  outline-offset: var(--focus-offset);
+}
+
+.key:disabled {
+  cursor: default;
+  opacity: 0.45;
+}
+
+.key:disabled .cap {
+  transform: none;
+}
+
+/* Stays focusable (so focus never drops out of a dialog) but reads as unavailable */
+.key[aria-disabled="true"] {
+  cursor: default;
+}
+
+/* Muted with color, not opacity, so a focus ring on it stays full strength */
+.key[aria-disabled="true"] .cap {
+  background: #9d978a;
+  color: rgb(28 27 25 / 0.45);
+  transform: none;
+}

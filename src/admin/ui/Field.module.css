@@ -1,0 +1,55 @@
+.field {
+  display: grid;
+  gap: 6px;
+  min-width: 0;
+}
+
+.label {
+  font-family: var(--font-ui);
+  font-size: 1rem;
+}
+
+/* A typed field on paper, boxed in a 2px ink rule */
+.input {
+  width: 100%;
+  min-height: 48px;
+  padding: 10px 12px;
+  border: 2px solid var(--ink);
+  border-radius: 2px;
+  background: #f4f0e6;
+  color: var(--ink);
+  font-family: var(--font-ui);
+  font-size: 1rem; /* 16px keeps phones from zooming in on focus */
+  line-height: 1.4;
+}
+
+textarea.input {
+  min-height: 7.5em;
+  resize: vertical;
+}
+
+.input[lang="bn"] {
+  line-height: var(--body-line-height-bn);
+}
+
+.input:focus-visible {
+  outline: var(--focus-ring);
+  outline-offset: 1px;
+}
+
+.input[aria-invalid="true"] {
+  border-color: var(--faded-red);
+}
+
+.hint {
+  font-family: var(--font-body);
+  font-style: italic;
+  font-size: 0.95rem;
+  color: #4a463f;
+}
+
+.error {
+  font-family: var(--font-ui);
+  font-size: 0.95rem;
+  color: var(--faded-red);
+}

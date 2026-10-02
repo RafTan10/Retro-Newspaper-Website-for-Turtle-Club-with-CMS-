@@ -1,0 +1,79 @@
+.field {
+  display: grid;
+  gap: 8px;
+  min-width: 0;
+}
+
+.label {
+  font-family: var(--font-ui);
+  font-size: 1rem;
+}
+
+.preview {
+  position: relative;
+  aspect-ratio: 16 / 10;
+  max-width: 28rem;
+  border: 2px solid var(--ink);
+  background: var(--newsprint-shade);
+  overflow: hidden;
+}
+
+.preview[data-empty] {
+  display: grid;
+  place-items: center;
+  border-style: dashed;
+  font-family: var(--font-ui);
+  color: #4a463f;
+}
+
+.image {
+  position: absolute;
+  inset: 0;
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+}
+
+.progress {
+  display: grid;
+  gap: 6px;
+  max-width: 28rem;
+  font-family: var(--font-ui);
+  font-size: 0.95rem;
+}
+
+/* An ink bar filling a printed rule */
+.bar {
+  display: block;
+  height: 10px;
+  border: 2px solid var(--ink);
+  background: #f4f0e6;
+}
+
+.bar > span {
+  display: block;
+  height: 100%;
+  background: var(--spot-blue);
+  transition: width 0.15s ease-out;
+}
+
+.failed {
+  display: grid;
+  gap: var(--space-2);
+  justify-items: start;
+  max-width: 28rem;
+  padding: var(--space-3);
+  border: 2px solid var(--faded-red);
+  font-family: var(--font-ui);
+  font-size: 0.95rem;
+  color: var(--faded-red);
+}
+
+.error {
+  font-family: var(--font-ui);
+  font-size: 0.95rem;
+  color: var(--faded-red);
+}

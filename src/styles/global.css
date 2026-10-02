@@ -1,0 +1,71 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  min-height: 100dvh;
+  background: var(--table);
+  color: var(--newsprint);
+  font-family: var(--font-body);
+  line-height: var(--body-line-height);
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* The CMS is on paper, so overscroll shows newsprint, not the black table */
+body[data-surface="paper"] {
+  background: var(--newsprint);
+}
+
+h1,
+h2,
+h3,
+p {
+  margin: 0;
+}
+
+/* Bangla: more line height and Bangla-aware line breaking */
+[lang="bn"] {
+  line-height: var(--body-line-height-bn);
+  word-break: normal;
+  overflow-wrap: anywhere;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+button {
+  font: inherit;
+  color: inherit;
+}
+
+:focus-visible {
+  outline: var(--focus-ring);
+  outline-offset: var(--focus-offset);
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+  border: 0;
+}

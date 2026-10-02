@@ -1,0 +1,131 @@
+/* Sized in container units so the cover scales as one printed object. */
+
+.cover {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  padding: 3.6cqi 5cqi 4cqi;
+  color: var(--ink);
+}
+
+.head {
+  text-align: center;
+}
+
+.masthead {
+  font-family: var(--font-display);
+  font-weight: 400;
+  font-size: 10.5cqi;
+  line-height: 1;
+  letter-spacing: 0.005em;
+  /* Slight ink misregistration: a spot-blue ghost 1px off register */
+  text-shadow: -1px 0.5px 0 rgb(46 74 107 / 0.6);
+}
+
+.folio {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin-top: 1.6cqi;
+  padding: 0.6cqi 0 0.5cqi;
+  border-top: 1px solid var(--ink);
+  border-bottom: 3px double var(--ink);
+  font-family: var(--font-body);
+  font-style: italic;
+  font-size: max(1.8cqi, 8px);
+  line-height: 1.3;
+}
+
+.lead {
+  position: relative;
+  flex: 1 1 auto;
+  min-height: 0;
+  margin: 2.4cqi 0 2.2cqi;
+}
+
+.image {
+  position: absolute;
+  inset: 0;
+}
+
+.bigNumber {
+  position: absolute;
+  left: 1.8cqi;
+  top: 1.2cqi;
+  z-index: 2;
+  font-family: var(--font-display);
+  font-size: 8cqi;
+  line-height: 1;
+  color: var(--newsprint);
+  opacity: 0.9;
+  text-shadow: 0 0 1px rgb(28 27 25 / 0.6);
+}
+
+.story {
+  display: grid;
+  grid-template-columns: 1fr 2.6fr;
+  gap: 2.6cqi;
+  height: 19cqi;
+  padding-top: 1.8cqi;
+  border-top: 2px solid var(--ink);
+}
+
+.headline {
+  font-family: var(--font-display);
+  font-weight: 400;
+  font-size: 2.9cqi;
+  line-height: 1.1;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 5;
+  overflow: hidden;
+}
+
+.excerpt {
+  columns: 3;
+  column-gap: 2.2cqi;
+  column-rule: 1px solid rgb(28 27 25 / 0.35);
+  column-fill: balance;
+  overflow: hidden;
+  font-size: max(1.6cqi, 6.5px);
+  line-height: 1.42;
+  hyphens: auto;
+  text-align: justify;
+}
+
+/* Bangla needs more room between lines than the Latin faces */
+.headline[lang="bn"] {
+  line-height: 1.35;
+}
+
+.excerpt[lang="bn"] {
+  line-height: 1.65;
+  text-align: left;
+}
+
+.noImage {
+  background: var(--newsprint-shade);
+}
+
+/* Small papers (phones): fewer, wider columns so the excerpt stays readable */
+@container (max-width: 440px) {
+  .story {
+    grid-template-columns: 1fr 1.5fr;
+    height: 25cqi;
+  }
+
+  .headline {
+    font-size: 4.4cqi;
+  }
+
+  .excerpt {
+    columns: 2;
+    font-size: max(2.6cqi, 8px);
+    line-height: 1.38;
+  }
+
+  .folio {
+    font-size: max(2.4cqi, 8px);
+  }
+}

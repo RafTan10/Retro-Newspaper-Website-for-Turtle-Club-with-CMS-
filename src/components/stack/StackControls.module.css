@@ -1,0 +1,59 @@
+.controls {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  grid-template-areas: "prev stage next";
+  align-items: center;
+  justify-content: center;
+  gap: clamp(24px, 5vw, 72px);
+}
+
+.stage {
+  grid-area: stage;
+  position: relative;
+  z-index: 1;
+  touch-action: pan-y;
+}
+
+/* While the reader is open its own keys take over */
+.controls[data-paused] .prev,
+.controls[data-paused] .next {
+  opacity: 0;
+  visibility: hidden;
+  transition:
+    opacity 0.2s ease-out,
+    visibility 0s 0.2s;
+}
+
+.prev {
+  grid-area: prev;
+  z-index: 2;
+}
+
+.next {
+  grid-area: next;
+  z-index: 2;
+}
+
+/* On narrow screens the stack takes the full width; keys sit underneath */
+@media (max-width: 640px) {
+  .controls {
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+      "stage stage"
+      "prev next";
+    row-gap: var(--space-6);
+    column-gap: var(--space-5);
+  }
+
+  .stage {
+    justify-self: center;
+  }
+
+  .prev {
+    justify-self: end;
+  }
+
+  .next {
+    justify-self: start;
+  }
+}

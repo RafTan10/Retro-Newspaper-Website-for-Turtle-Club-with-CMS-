@@ -1,0 +1,331 @@
+.list {
+  display: grid;
+  gap: var(--space-4);
+}
+
+.head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-3);
+}
+
+.title {
+  font-family: var(--font-display);
+  font-weight: 400;
+  font-size: 2rem;
+  line-height: 1.1;
+}
+
+.tabs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+  border-bottom: 2px solid var(--ink);
+}
+
+.tab {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  min-height: 48px;
+  margin-bottom: -2px;
+  padding: 0 var(--space-4);
+  border: 2px solid transparent;
+  border-bottom: 0;
+  border-radius: 6px 6px 0 0;
+  background: transparent;
+  color: var(--ink);
+  font-family: var(--font-ui);
+  font-size: 1rem;
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.tab[aria-selected="true"] {
+  border-color: var(--ink);
+  background: #f4f0e6;
+  color: var(--spot-blue);
+}
+
+.tab:focus-visible {
+  outline: var(--focus-ring);
+  outline-offset: 2px;
+}
+
+.count {
+  min-width: 1.6em;
+  padding: 0 6px;
+  border: 1.5px solid currentColor;
+  border-radius: 999px;
+  font-size: 0.85rem;
+  text-align: center;
+}
+
+.help {
+  max-width: 62ch;
+  font-family: var(--font-body);
+  font-style: italic;
+  font-size: 1rem;
+  color: #4a463f;
+}
+
+.message {
+  padding: var(--space-2) var(--space-3);
+  border-left: 4px solid var(--spot-blue);
+  background: rgb(46 74 107 / 0.07);
+  font-family: var(--font-ui);
+  font-size: 0.95rem;
+}
+
+.error {
+  display: grid;
+  gap: var(--space-2);
+  justify-items: start;
+  padding: var(--space-3);
+  border: 2px solid var(--faded-red);
+  font-family: var(--font-ui);
+  color: var(--faded-red);
+}
+
+.empty {
+  padding: var(--space-6) 0;
+  font-family: var(--font-ui);
+  text-align: center;
+}
+
+.rows {
+  display: grid;
+  gap: var(--space-3);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+/* Phones: handle, thumbnail and text on top; actions wrap underneath */
+.row {
+  position: relative;
+  display: grid;
+  grid-template-columns: auto 72px 1fr;
+  grid-template-areas:
+    "handle thumb info"
+    "actions actions actions";
+  gap: var(--space-3);
+  align-items: start;
+  padding: var(--space-3);
+  border: 2px solid var(--ink);
+  background: #f4f0e6;
+  list-style: none;
+}
+
+/* Archive rows have no drag handle */
+.archivedRow {
+  grid-template-columns: 72px 1fr;
+  grid-template-areas:
+    "thumb info"
+    "actions actions";
+}
+
+.handle {
+  grid-area: handle;
+  display: grid;
+  place-items: center;
+  width: 44px;
+  height: 44px;
+  margin: -4px 0 0 -4px;
+  padding: 0;
+  border: 0;
+  border-radius: 6px;
+  background: transparent;
+  color: var(--ink);
+  cursor: grab;
+  touch-action: none;
+}
+
+.handle:active {
+  cursor: grabbing;
+}
+
+.handle:focus-visible {
+  outline: var(--focus-ring);
+}
+
+.thumb {
+  grid-area: thumb;
+  aspect-ratio: 6 / 5;
+  background: var(--newsprint-shade);
+  border: 1px solid var(--ink);
+  overflow: hidden;
+  position: relative;
+}
+
+.thumbImage {
+  position: absolute;
+  inset: 0;
+}
+
+.info {
+  grid-area: info;
+  display: grid;
+  gap: 4px;
+  min-width: 0;
+}
+
+.meta {
+  font-family: var(--font-body);
+  font-style: italic;
+  font-size: 0.92rem;
+}
+
+.headline {
+  font-family: var(--font-display);
+  font-weight: 400;
+  font-size: 1.2rem;
+  line-height: 1.2;
+}
+
+.headline[lang="bn"] {
+  line-height: 1.45;
+}
+
+/* A full-height tap target even when the headline fits on one line */
+.headline a {
+  display: flex;
+  align-items: center;
+  min-height: 44px;
+  color: inherit;
+  text-decoration: none;
+}
+
+.headline a:hover {
+  text-decoration: underline;
+}
+
+.statusLine {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 6px 12px;
+  margin-top: 4px;
+}
+
+.edited {
+  font-family: var(--font-ui);
+  font-size: 0.8rem;
+  color: #4a463f;
+  overflow-wrap: anywhere;
+}
+
+.actions {
+  grid-area: actions;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--space-2);
+}
+
+.editLink {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  padding: 0 12px;
+  margin-bottom: 4px;
+  border: 2px solid var(--spot-blue);
+  border-radius: 9px;
+  color: var(--spot-blue);
+  font-family: var(--font-ui);
+  font-size: 0.92rem;
+  text-decoration: none;
+}
+
+.editLink:focus-visible {
+  outline: var(--focus-ring);
+  outline-offset: var(--focus-offset);
+}
+
+.moves {
+  display: inline-flex;
+  gap: var(--space-2);
+  margin-left: auto;
+}
+
+/* Wider screens: everything on one line */
+@media (min-width: 900px) {
+  .row {
+    grid-template-columns: auto 96px minmax(0, 1fr) auto;
+    grid-template-areas: "handle thumb info actions";
+    align-items: center;
+  }
+
+  .archivedRow {
+    grid-template-columns: 96px minmax(0, 1fr) auto;
+    grid-template-areas: "thumb info actions";
+  }
+
+  .handle {
+    margin: 0;
+  }
+
+  .actions {
+    justify-content: flex-end;
+    max-width: 30rem;
+  }
+
+  .headline {
+    font-size: 1.35rem;
+  }
+}
+
+/* Narrowest phones: smaller thumbnail so headlines get the room */
+@media (max-width: 400px) {
+  .row {
+    grid-template-columns: auto 52px 1fr;
+    gap: var(--space-2) var(--space-3);
+    padding: var(--space-3) var(--space-2) var(--space-3) var(--space-1);
+  }
+
+  .archivedRow {
+    grid-template-columns: 52px 1fr;
+    padding-left: var(--space-3);
+  }
+
+  .headline {
+    font-size: 1.1rem;
+  }
+
+  .actions {
+    padding-left: var(--space-2);
+  }
+}
+
+.deletedNote {
+  font-family: var(--font-ui);
+  font-size: 0.85rem;
+  line-height: 1.45;
+  color: #4a463f;
+  overflow-wrap: anywhere;
+}
+
+.deletedNote strong {
+  font-weight: 400;
+  color: var(--faded-red);
+}
+
+/* Phones: three tabs don't fit on one line, so they become separate keys */
+@media (max-width: 560px) {
+  .tabs {
+    border-bottom: 0;
+  }
+
+  .tab {
+    margin-bottom: 0;
+    border: 2px solid var(--ink);
+    border-radius: 9px;
+    padding: 0 var(--space-3);
+  }
+
+  .tab[aria-selected="true"] {
+    background: var(--ink);
+    color: var(--newsprint);
+  }
+}

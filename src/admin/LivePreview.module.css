@@ -1,0 +1,143 @@
+.preview {
+  display: grid;
+  gap: var(--space-3);
+}
+
+.picker {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+}
+
+.chip {
+  min-height: 44px;
+  padding: 0 14px;
+  border: 2px solid var(--ink);
+  border-radius: 999px;
+  background: transparent;
+  color: var(--ink);
+  font-family: var(--font-ui);
+  font-size: 0.92rem;
+  cursor: pointer;
+}
+
+.chip[aria-pressed="true"] {
+  background: var(--spot-blue);
+  border-color: var(--spot-blue);
+  color: var(--newsprint);
+}
+
+.chip:focus-visible {
+  outline: var(--focus-ring);
+  outline-offset: 2px;
+}
+
+/* Same paper as the stack: 6:5 newsprint, cover sized in container units */
+.paper {
+  position: relative;
+  aspect-ratio: 6 / 5;
+  container-type: inline-size;
+  background: var(--newsprint);
+  box-shadow:
+    0 2px 3px rgb(0 0 0 / 0.25),
+    0 10px 24px rgb(0 0 0 / 0.2);
+}
+
+.paper::after,
+.sheet::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background-image: var(--grain);
+  background-size: 180px 180px;
+  opacity: 0.22;
+  mix-blend-mode: multiply;
+}
+
+/* A reader page in miniature */
+.sheet {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  aspect-ratio: 6 / 5;
+  min-height: 320px;
+  padding: 10px;
+  background: var(--newsprint);
+  outline: 1px solid var(--ink);
+  outline-offset: -5px;
+  box-shadow:
+    0 2px 3px rgb(0 0 0 / 0.25),
+    0 10px 24px rgb(0 0 0 / 0.2);
+}
+
+.strip {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: var(--space-3);
+  padding: 2px 4px 6px;
+  border-bottom: 3px double var(--ink);
+}
+
+.masthead {
+  font-family: var(--font-display);
+  font-size: 1.3rem;
+  line-height: 1;
+}
+
+.folio {
+  font-family: var(--font-body);
+  font-style: italic;
+  font-size: 0.8rem;
+  text-align: right;
+}
+
+.content {
+  position: relative;
+  flex: 1 1 auto;
+  min-height: 0;
+}
+
+.missing {
+  display: grid;
+  place-items: center;
+  height: 100%;
+  border: 2px dashed var(--ink);
+  font-family: var(--font-ui);
+  text-align: center;
+  padding: var(--space-3);
+}
+
+.footer {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: var(--space-3);
+  padding: 4px 4px 0;
+  border-top: 1px solid var(--ink);
+}
+
+.title {
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-family: var(--font-body);
+  font-style: italic;
+  font-size: 0.8rem;
+}
+
+.indicator {
+  flex: none;
+  font-family: var(--font-ui);
+  font-size: 0.78rem;
+}
+
+/* Phones: a taller page, like the reader on a phone */
+@media (max-width: 640px) {
+  .sheet {
+    aspect-ratio: 3 / 4;
+  }
+}
