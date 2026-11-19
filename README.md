@@ -2,6 +2,12 @@
 
 A news site that presents each issue as a printed newspaper in a physical stack. Flip through the pile, pick up a paper, and page through the story in a reader.
 
+![Demo: flipping through the newspaper stack, then reading an issue page by page](docs/demo.gif)
+
+## 🎬 Demo video
+
+<!-- Drag docs/demo.mp4 here in GitHub's web editor and it will become a playable video -->
+
 ![The newspaper stack on the home page](docs/stack.jpg)
 
 ## Features
